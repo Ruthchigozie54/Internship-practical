@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+}
+
+.fan {
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  background: #222;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 187, 212, 0.406);
+
+}
+.fan:hover .blades {
+  animation: spin 0.5s linear infinite;
+}
+
+/* the stand */
+.fan::after {
+  content: "";
+  width: 2vh;
+  height: 25vh;
+  background: #444;
+  position: absolute;
+  bottom: -25vh;
+}
+/* the base section */
+.fan::before {
+  content: "";
+  width: 15vh;
+  height: 3vh;
+  background-color: #333;
+  position: absolute;
+  bottom: -28vh;
+  border-radius: 10px;
+}
+
+.guard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #888;
+}
+.guard::before,
+.guard::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #555;
+}
+
+.guard::before {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+.guard::after {
+  width: 60%;
+  height: 60%;
+  top: 20%;
+  left: 20%;
+}
+/* blade section */
+.blades {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: spin 2s linear infinite;
+  transform-origin: center;
+}
+
+.blade {
+  width: 12%;
+  height: 45%;
+  background: linear-gradient(black, #007c91);
+  position: absolute;
+  top: 5%;
+  left: 44%;
+  border-radius: 100px;
+  transform-origin: bottom center;
+}
+.blade:nth-child(1) {
+  transform: rotate(0deg);
+}
+.blade:nth-child(2) {
+  transform: rotate(120deg);
+}
+.blade:nth-child(3) {
+  transform: rotate(240deg);
+}
+
+.center {
+  width: 17vh;
+  height: 9vh;
+  background: #ffffffdf;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid black;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ox-logo section */
+.ox-container {
+  position: absolute;
+  height: 10vh;
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  /* background-color: black; */
+
+}
+.first {
+  height: 3.9vh; 
+  width: 6vw; 
+  background-color: blue; 
+  border-radius: 50%; 
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second {
+  height: 3.3vh; 
+  width: 5.7vw; 
+  background-color: white; 
+  border-radius: 50%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+.third {
+   height: 3.1vh; 
+   width: 5.4vw; 
+   background-color: blue; 
+   border-radius: 50%; 
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+}
+.forth {
+   height: 3vh; 
+   width: 5vw; 
+   background-color: #D21404; 
+   border-radius: 50%; 
+   display:flex; 
+   justify-content: center; 
+   align-items: center; 
+   text-align: center; 
+   color: blue;
+   font-weight: bold;
+}
