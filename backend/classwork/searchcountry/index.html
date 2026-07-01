@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .countries{
+            width: 200px;
+            min-height: 100px;
+            background-color: white;
+            border: 1px solid gray;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Welcome to my app
+    </h1>
+
+    <button onclick="fetchCountries()">Click all countries</button>
+    <button onclick="fetchPopulated()">Click top 10 Populated countries</button>
+    <hr>
+    <div class="search">
+        <label for="countrySearch">Search countries:</label>
+        <input id="countrySearch" type="search" onkeyup="searchCountries(this)">
+        <div class="countries" id="list-countries">
+
+        </div>
+    </div>
+    <hr>
+    <div id="container"></div>
+
+    <script>
+        
+        const el = document.getElementById('container');
+        const countries = [];
+
+        async function loadCountries() {
+          const result = await fetch("/backend.php?action=all")
+          .then(res => res.json())
+          .catch(error => alert(error));
+
+          countries.push(...result);
+        
+        }
+
+        async  function  fetchCountries(){
+            el.innerText = "Please wait";
+            const uri = "/backend.php?action=all";
+            const result = await fetch(uri).then((response) => response.json())
+            .catch(error => alert(error))
+            el.innerText = "";
+            result.forEach(element => {
+                el.innerHTML += "<h1>"+ element.Name +"</h1>";
+            });
+            
+        }
+
+
+        async  function  fetchPopulated(){
+            el.innerText = "Please wait";
+            const uri = "/backend.php?action=population";
+            const result = await fetch(uri).then((response) => response.json())
+            .catch(error => alert(error))
+            el.innerText = "";
+            result.forEach(element => {
+                el.innerHTML += "<h1>"+ element.Name +"</h1>";
+            });
+            
+        }
+
+        async function searchCountries(element) {
+          const display = document.querySelector("#list-countries");
+          display.innerHTML = "";
+          const keyword = element.value.toLowerCase();
+
+          if (keyword === "") {
+            // console.log(keyword);
+            // console.log(countries);
+            return;
+          }
+
+          const filteredCountries = countries.filter(country => 
+            country.Name.toLowerCase().includes(keyword)
+          );
+
+          filteredCountries.forEach(country => {
+            display.innerHTML += `<div>${country.Name}</div>`;
+          });
+        }
+
+
+
+        // async function searchCountries(element){
+        //     const display = document.querySelector('#list-countries');
+        //     display.innerHTML = "";
+        //     // get the input
+        //    const keyword = element.value
+        //    // use the keyword to send a request to the backend
+        //   if (keyword != "") {
+        //      await fetch('/search.php?query='+keyword).then(res => res.json()).then(data => {
+        //     data.forEach(item => {
+        //         display.innerHTML += `<li>${item.Name}</li>`;
+        //     })
+        //    }).catch(error => alert(error));
+        //   }
+            
+        // }
+
+        loadCountries();
+    </script>
+</body>
+
+
+</html>
