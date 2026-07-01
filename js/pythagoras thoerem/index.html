@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagoras Theorem</title>
+</head>
+<body>
+
+    <h1>Pythagoras Theorem Calculator</h1>
+
+    
+    <input type="text" placeholder="Enter Hypotenuse" id="hypotenuse">
+    <br><br>
+
+    
+    <input type="text" placeholder="Enter Opposite" id="opposite">
+    <br></br>
+
+    
+    <button onclick="calculateAdjacent()">
+        Calculate
+    </button>
+
+    <h2 id="result"></h2>
+
+    <script>
+
+        function calculateAdjacent() {
+
+            const result = document.getElementById('result');
+
+            const hypotenuse = document.getElementById('hypotenuse');
+            const opposite = document.getElementById('opposite');
+
+            const hypotenuseValue = Number(hypotenuse.value);
+            const oppositeValue = Number(opposite.value);
+
+            // formula
+            const adjacent =
+                Math.sqrt(
+                    Math.pow(hypotenuseValue, 2) -
+                    Math.pow(oppositeValue, 2)
+                );
+
+            result.textContent =
+                "The Adjacent value is: " + adjacent;
+
+        }
+
+    </script>
+
+</body>
+</html>

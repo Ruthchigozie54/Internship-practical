@@ -1,0 +1,217 @@
+/* =======================
+   RESET
+======================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BODY
+======================= */
+body{
+    background: #f4f6f9; /* Changed to a modern, cool light-gray/blue tint */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* =======================
+   CONTAINER
+======================= */
+.container{
+    width: 95%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(160, 170, 190, 0.15); /* Softer, modern blueprint shadow */
+}
+
+/* =======================
+   HEADINGS
+======================= */
+.container h1{
+    text-align: center;
+    color: #1d2d44; /* Changed from green to a deep premium navy */
+    margin-bottom: 5px;
+}
+
+.container h3{
+    text-align: center;
+    color: #748cab; /* Changed from generic gray to a muted slate blue */
+    margin-bottom: 20px;
+}
+
+/* =======================
+   INPUT GROUP
+======================= */
+.input-group{
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1d2d44; /* Match deep navy theme */
+}
+
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Clean, lighter border line */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    background: #ffffff;
+    color: #212529;
+}
+
+.input-group input:focus{
+    outline: none;
+    border-color: #f26419; /* Focus indicator turns to a vibrant coral-orange */
+    box-shadow: 0 0 5px rgba(242, 100, 25, 0.25);
+}
+
+/* =======================
+   TABLE
+======================= */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td{
+    border: 1px solid #e5e9f0; /* Softer interior grid lines */
+    padding: 10px;
+    text-align: center;
+    color: #333333;
+}
+
+table th{
+    background: #1d2d44; /* Table header changed from green to Navy */
+    color: white;
+}
+
+table input{
+    width: 80px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: #f8f9fa; /* Slightly off-white table inputs for better contrast */
+}
+
+table input:focus{
+    outline: none;
+    border-color: #1d2d44; /* Changes to Navy on table focus */
+}
+
+/* =======================
+   BUTTON SECTION
+======================= */
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons button{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Add Row */
+#addRow{
+    background: #2a9d8f; /* Clean teal accent for generation/addition */
+}
+
+#addRow:hover{
+    background: #218276;
+}
+
+/* Calculate */
+#calculate{
+    background: #f26419; /* High contrast energetic coral for primary action */
+}
+
+#calculate:hover{
+    background: #d64f0e;
+}
+
+/* Reset */
+#reset{
+    background: #6c757d; /* Neutral sleek dark-gray for the reset button */
+}
+
+#reset:hover{
+    background: #5a6268;
+}
+
+/* Delete Button */
+.deleteBtn{
+    background: #e76f51; /* Soft terracotta-red for minor destructive actions */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deleteBtn:hover{
+    background: #de5633;
+}
+
+/* =======================
+   SUMMARY
+======================= */
+.summary{
+    background: #f8f9fa; /* Sleek light gray summary background block */
+    border-left: 5px solid #f26419; /* Swapped green bar for the vibrant Coral accent */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.summary h3{
+    text-align: left;
+    color: #1d2d44; /* Updated header color to match the layout's primary navy */
+    margin-bottom: 15px;
+}
+
+.summary p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #495057; /* Smooth dark gray body typography */
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media(max-width:768px){
+
+    .buttons{
+        flex-direction: column;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+    }
+
+    table input{
+        width: 70px;
+    }
+}

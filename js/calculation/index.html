@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculation</title>
+</head>
+<body>
+
+
+  <!-- ASSIGNMENT
+create an array of objects and store the result of the following in a an array
+1. given that an object of 10kg moves at 10km/h calculate the force that is acted on the object
+
+force =mass x distance
+
+2. given that the speed of a vehicle is 10km/h calculate the time travel when this vehicle runs for 10mins
+3. in how many ways can the word javascript be arranged (dont do this one)
+4. prove with javascript that 11 is an odd number
+5. using javascript write an algorithm thta will identify phone number carriers
+   (this program should be able to detect the exact network, network such as MTN, AIRTEL, GLO etc)
+
+(the answer should be arranged in an array) -->
+
+
+  <script>
+
+    // number one(1)
+
+    // const mass = 10;
+    // const speed = 10;
+    // let force = mass * speed
+    // console.log("The force acting on the object =" + " " + force + "N");
+
+
+
+
+
+    // number two(2)
+
+// let speed = 10;
+// let timeInMinutes = 10;
+
+// // convert minutes to hours
+// let timeInHours = timeInMinutes / 60;
+
+// // calculate distance
+// let distance = speed * timeInHours;
+
+// console.log("Distance traveled is " + distance + "km");
+
+
+
+
+// Number three (3)
+
+// let number = 11;
+
+// if (number % 2 !== 0) {
+//     console.log(number + " is an odd number");
+// } else {
+//     console.log(number + " is an even number");
+// }
+
+
+
+
+
+// number four (4)
+
+let phoneNumber = "09153186026";
+
+let prefix = phoneNumber.substring(0, 4);
+
+if (
+    prefix === "0803" ||
+    prefix === "0806" ||
+    prefix === "0703" ||
+    prefix === "0706" ||
+    prefix === "0813" ||
+    prefix === "0816" ||
+    prefix === "0810" ||
+    prefix === "0814" ||
+    prefix === "0903" ||
+    prefix === "0906"
+) {
+    console.log(`${phoneNumber} is a MTN line`);
+}
+
+else if (
+    prefix === "0802" ||
+    prefix === "0808" ||
+    prefix === "0708" ||
+    prefix === "0812" ||
+    prefix === "0701" ||
+    prefix === "0902" ||
+    prefix === "0907"
+) {
+    console.log(`${phoneNumber} is a Airtel line`)
+}
+
+else if (
+    prefix === "0805" ||
+    prefix === "0807" ||
+    prefix === "0705" ||
+    prefix === "0815" ||
+    prefix === "0811" ||
+    prefix === "0915" ||
+    prefix === "0905"
+) {
+    console.log(`${phoneNumber} is a Glo line`);
+}
+
+else if (
+    prefix === "0809" ||
+    prefix === "0817" ||
+    prefix === "0818" ||
+    prefix === "0909" ||
+    prefix === "0908"
+) {
+    console.log(`${phoneNumber} is a 9mobile line`);
+}
+
+else {
+    console.log("Unknown Network");
+}
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,343 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            overflow-x: hidden;
+
+        }
+
+        #container {
+            background-color: rgb(163, 172, 163);
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        #map {
+            position: relative;
+            
+            background-image: url("../image/maps.jpeg");
+            width: 700px;
+            height: 700px;
+            background-size: cover;
+            margin: auto 0px;
+            display: inline-block;
+        }
+
+ #sokoto {
+    position: absolute;
+    top: 140px;
+    left: 200px;
+}
+
+        #adamawa {
+            position: absolute;
+            margin: 320px 0px 0px 495px;
+            font-size: 0.7rem;
+        }
+
+        #kebbi {
+            position: absolute;
+            margin: 200px 0px 0px 133px;
+        }
+
+        #zamfara {
+            position: absolute;
+            margin: 200px 0px 0px 215px;
+        }
+
+        #katsina {
+            position: absolute;
+            margin: 170px 0px 0px 288px;
+            font-size: 0.7rem;
+
+        }
+
+        #kano {
+            position: absolute;
+            margin: 205px 0px 0px 330px;
+            font-size: 0.7rem;
+        }
+
+        #jigawa {
+            position: absolute;
+            margin: 183px 0px 0px 370px;
+            font-size: 0.8rem;
+        }
+
+        #yobe {
+            position: absolute;
+            margin: 180px 0px 0px 460px;
+            font-size: 0.7rem;
+        }
+
+        #borno {
+            position: absolute;
+            margin: 200px 0px 0px 530px;
+            font-size: 0.7rem;
+        }
+
+        #niger {
+            position: absolute;
+            margin: 300px 0px 0px 215px;
+            font-size: 0.9rem;
+        }
+
+        #kaduna {
+            position: absolute;
+            margin: 260px 0px 0px 295px;
+            font-size: 0.8rem;
+        }
+
+        #bauchi {
+            position: absolute;
+            margin: 270px 0px 0px 380px;
+            font-size: 0.9rem;
+        }
+
+         #plateau {
+            position: absolute;
+            margin: 335px 0px 0px 380px;
+            font-size: 0.9rem;
+        }
+
+        #gombe {
+            position: absolute;
+            margin: 288px 0px 0px 445px;
+            font-size: 0.6rem;
+        }
+
+        #kwara {
+            position: absolute;
+            margin: 365px 0px 0px 160px;
+            font-size: 0.8rem;
+        }
+
+        #nasarawa {
+            position: absolute;
+            margin: 370px 0px 0px 298px;
+            font-size: 0.8rem;
+        }
+
+        #jos {
+            position: absolute;
+            margin: 350px 0px 0px 380px;
+        }
+
+        #taraba {
+            position: absolute;
+            margin: 400px 0px 0px 410px;
+            font-size: 0.9rem;
+        }
+
+        #kogi {
+            position: absolute;
+            margin: 390px 0px 0px 240px;
+            font-size: 0.8rem;
+        }
+
+        #benue {
+            position: absolute;
+            margin: 415px 0px 0px 340px;
+            font-size: 0.8rem;
+        }
+
+        #oyo {
+            position: absolute;
+            margin: 380px 0px 0px 110px;
+        }
+
+        #ekiti {
+            position: absolute;
+            margin: 405px 0px 0px 190px;
+            font-size: 0.6rem;
+
+        }
+
+        #osun {
+            position: absolute;
+            margin: 410px 0px 0px 155px;
+            font-size: 0.7rem;
+        }
+
+        #ogun {
+            position: absolute;
+            margin: 430px 0px 0px 100px;
+            font-size: 0.9rem;
+
+        }
+
+        #lagos {
+            position: absolute;
+            margin: 465px 0px 0px 100px;
+            font-size: 1rem;
+
+        }
+
+        #ondo {
+            position: absolute;
+            margin: 440px 0px 0px 170px;
+            font-size: 0.7rem;
+        }
+
+        #edo {
+            position: absolute;
+            margin: 460px 0px 0px 210px;
+            font-size: 0.7rem;
+        }
+
+        #anambra {
+            position: absolute;
+            margin: 465px 0px 0px 265px;
+            font-size: 0.8rem;
+        }
+
+        #enugu {
+            position: absolute;
+            margin: 445px 0px 0px 280px;
+            font-size: 0.7rem;
+        }
+
+        #ebonyi {
+            position: absolute;
+            margin: 465px 0px 0px 310px;
+            font-size: 0.6rem;
+        }
+
+         #crossriver {
+            position: absolute;
+            margin: 490px 0px 0px 320px;
+            font-size: 0.8rem;
+        }
+
+        #cross {
+            position: absolute;
+            margin: 480px 0px 0px 330px;
+            font-size: 0.8rem;
+        }
+
+        #delta {
+            position: absolute;
+            margin: 495px 0px 0px 210px;
+            font-size: 0.8rem;
+        }
+
+        #imo {
+            position: absolute;
+            margin: 495px 0px 0px 265px;
+            font-size: 0.7rem;
+        }
+
+        #abia {
+            position: absolute;
+            margin: 495px 0px 0px 295px;
+            font-size: 0.7rem;
+        }
+
+        #bayelsa {
+            position: absolute;
+            margin: 530px 0px 0px 209px;
+            font-size: 0.8rem;
+        }
+
+        #rivers {
+            position: absolute;
+            margin: 520px 0px 0px 255px;
+            font-size: 0.8rem;
+        }
+
+        #akwaibom {
+            position: absolute;
+            margin: 535px 0px 0px 295px;
+            font-size: 0.7rem;
+        }
+
+        div a {
+            text-decoration: none;
+        }
+
+
+
+
+        #chart {
+            position: relative;
+    
+            width: 700px;
+            height: 700px;
+            background-color: rgb(250, 248, 248);
+            margin: auto 0px;
+            display: inline-block;
+            position: absolute;
+
+        }
+
+        #h1 {
+            color: rgb(97, 83, 83);
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        #h2 {
+            color: rgb(209, 71, 71);
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #box {
+            height: auto;
+            width: 100%;
+            overflow-x: hidden;
+            margin: 40px 0px;
+        }
+
+
+
+
+            /* BARS/CHART */
+        .state {
+    height: 25px;
+    margin: 3px 10px;
+    background-color: rgba(163, 7, 98, 0.753);
+    border: 1px solid white;
+    color: white;
+    font-weight: 800;
+}
+
+      
+#lagos2 { width: 100%; }
+#kano2 { width: 73%; }
+#kaduna2 { width: 63%; }
+#katsina2 { width: 55%; }
+#oyo2 { width: 53%; }
+#rivers2 { width: 47%; }
+#bauchi2 { width: 44%; }
+#jigawa2 { width: 43%; }
+#benue2 { width: 42%; }
+#anambra2 { width: 41%; }
+#borno2 { width: 40%; }
+#delta2 { width: 38%; }
+#imo2 { width: 36%; }
+#niger2 { width: 35%; }
+#plateau2 { width: 34%; }
+#akwa2 { width: 35%; }
+#osun2 { width: 33%; }
+#ondo2 { width: 32%; }
+#sokoto2 { width: 31%; }
+#adamawa2 { width: 31%; }
+#edo2 { width: 28%; }
+#kogi2 { width: 28%; }
+#enugu2 { width: 27%; }
+#kebbi2 { width: 25%; }
+#zamfara2 { width: 24%; }
+#abia2 { width: 23%; }
+#taraba2 { width: 23%; }
+#yobe2 { width: 22%; }
+#kwara2 { width: 21%; }
+#crossriver2 { width: 21%; }
+#ekiti2 { width: 20%; }
+#gombe2 { width: 20%; }
+#nasarawa2 { width: 18%; }
+#ebonyi2 { width: 18%; }
+#bayelsa2 { width: 13%; }

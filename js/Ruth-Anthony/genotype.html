@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genotype Calculator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  
+
+  <div class="container">
+
+    <h1>Genotype Compatibility Calculator</h1>
+
+    <select id="genotype1">
+      <option value="">Select First Genotype</option>
+      <option value="AA">AA</option>
+      <option value="AS">AS</option>
+      <option value="SS">SS</option>
+      <option value="AC">AC</option>
+    </select><br><br>
+
+
+    <select id="genotype2"> 
+      <option value="">Select Second Genotype</option>
+      <option value="AA">AA</option>
+      <option value="AS">AS</option>
+      <option value="SS">SS</option>
+      <option value="AC">AC</option>
+    </select> <br><br>
+
+    <button onclick="checkCompatibility()">
+      Check Compatibility
+    </button>
+
+    <h2 id="result"></h2>
+
+  </div>
+
+
+  <script src="./script2.js"></script>
+</body>
+</html>

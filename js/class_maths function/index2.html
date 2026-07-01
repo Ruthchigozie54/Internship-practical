@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="result"></h1>
+
+  <script>
+    // y = 2x + 4
+    // x = -3 < x <= 6
+
+    // for (let x = -3; x <= 6; x++) {
+    //   y = 2 * x + 4
+
+    //   console.log(y)
+    // }
+
+
+
+
+
+
+    // const display = document.getElementById('result')
+
+
+
+    // function divide (x,y) {
+    //   const result = (2 * (x ** 2) )/ (2 * x * (y ** 2))
+    //   return result;
+    // }
+
+    // display.textContent = divide(3,2)
+
+
+
+
+
+
+    //f(x) = 2x^2, when x = 3
+    const display = document.getElementById('result')
+    function evaluate (x) {
+      const result = 2 * (x ** 2)
+      return result;
+    }
+    // display.innerHTML = "<h1> The result of 2x^2 when x=3 is: " + evaluate (3) + "</h1>"
+    display.innerHTML = "<h1>The result of 2x² when x = 3 is: " + evaluate(3) + "</h1>";
+
+  </script>
+</body>
+</html>

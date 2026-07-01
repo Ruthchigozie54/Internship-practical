@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Deviation Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Standard Deviation Calculator</h1>
+    <h3>Table 18.21</h3>
+
+    <div class="input-group">
+        <label>Mean</label>
+        <input type="number" id="mean" step="any" placeholder="Enter Mean">
+    </div>
+
+    <table id="dataTable">
+
+        <thead>
+            <tr>
+                <th>x</th>
+                <th>f</th>
+                <th>d</th>
+                <th>d<sup>2</sup></th>
+                <th>fd<sup>2</sup></th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>
+                    <input type="number" class="x" step="any">
+                </td>
+
+                <td>
+                    <input type="number" class="f">
+                </td>
+
+                <td class="d">-</td>
+
+                <td class="d2">-</td>
+
+                <td class="fd2">-</td>
+
+                <td>
+                    <button class="deleteBtn">Delete</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="buttons">
+
+        <button id="addRow">Add Row</button>
+
+        <button id="calculate">Calculate</button>
+
+        <button id="reset">Reset</button>
+
+    </div>
+
+    <div class="summary">
+
+        
+
+        <p><strong>Total Frequency (&Sigma;f):</strong>
+            <span id="totalF">0</span>
+        </p>
+
+        <p><strong>Total fd<sup>2</sup> (&Sigma;fd<sup>2</sup>):</strong>
+            <span id="totalFD2">0</span>
+        </p>
+
+        <p><strong>Standard Deviation:</strong>
+            <span id="stdDev">0</span>
+        </p>
+
+        <h3>Summary</h3>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

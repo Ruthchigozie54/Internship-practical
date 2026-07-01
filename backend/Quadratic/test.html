@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quadratic API</title>
+</head>
+
+<body>
+
+<h2>Quadratic Equation Solver</h2>
+
+<input id="a" placeholder="Enter coefficient a"><br><br>
+
+<input id="b" placeholder="Enter coefficient b"><br><br>
+
+<input id="c" placeholder="Enter coefficient c"><br><br>
+
+<button onclick="solveEquation()">Solve</button>
+
+<hr>
+
+<div id="result"></div>
+
+<script>
+
+async function solveEquation(){
+
+    const form = new FormData();
+
+    form.append("a", document.getElementById("a").value);
+    form.append("b", document.getElementById("b").value);
+    form.append("c", document.getElementById("c").value);
+
+    const response = await fetch("index.php",{
+        method:"POST",
+        body:form
+    });
+
+    const data = await response.json();
+
+    let html = "";
+
+    if(!data.success){
+
+        html = data.message;
+
+    }
+    else{
+
+        html += "<h3>" + data.type + "</h3>";
+
+        if(data.factorized){
+
+            html += "<p><strong>" + data.factorized + "</strong></p>";
+
+        }
+
+        if(data.root){
+
+            html += "<p>Root: " + data.root + "</p>";
+
+        }
+
+        if(data.root1){
+
+            html += "<p>Root 1: " + data.root1 + "</p>";
+
+            html += "<p>Root 2: " + data.root2 + "</p>";
+
+        }
+
+    }
+
+    document.getElementById("result").innerHTML = html;
+
+}
+
+</script>
+
+</body>
+
+</html>
